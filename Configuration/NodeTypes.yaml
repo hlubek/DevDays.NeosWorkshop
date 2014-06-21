@@ -45,3 +45,53 @@
                 label: 'Beige'
               'brown-bg':
                 label: 'Brown'
+
+    'border':
+      type: string
+      ui:
+        label: 'Border'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Select Border'
+            values:
+              '':
+                label: 'No Border'
+              'border-top':
+                label: 'Border Top'
+              'border-top-simple':
+                label: 'Border Top Simple'
+
+    'centered':
+      type: boolean
+      ui:
+        label: 'Center?'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+
+    'noPadding':
+      type: boolean
+      ui:
+        label: 'No Padding?'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+
+'TYPO3.Neos.NodeTypes:Page':
+  ui:
+    inspector:
+      groups:
+        'image':
+          label: 'Image'
+          position: 5
+  properties:
+    'headerImage':
+      type: 'TYPO3\Media\Domain\Model\ImageVariant'
+      ui:
+        label: 'Header Image'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'

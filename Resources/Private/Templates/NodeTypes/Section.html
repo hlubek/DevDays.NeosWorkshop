@@ -1,4 +1,9 @@
-<section class="{background}">
+<section class="
+	{background}
+	{border}
+	{f:if(condition: centered, then: 'centered')}
+	{f:if(condition: noPadding, then: 'no-padding')}
+	">
 	<div class="container">
 		{content -> f:format.raw()}
 	</div>

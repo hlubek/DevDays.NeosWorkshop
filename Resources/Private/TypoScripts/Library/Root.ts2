@@ -19,6 +19,7 @@ page = Page {
 		sectionName = 'body'
 
 		homepage = ${site}
+		headerImage = ${q(node).property('headerImage')}
 
 		parts {
 			menu = Menu {
