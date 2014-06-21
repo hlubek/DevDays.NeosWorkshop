@@ -1,0 +1,37 @@
+# If you need more than just the "main" content area you can
+# uncomment the snippet below. It will add a "sidebar" area
+# to your pages. You can add as many areas as you like, still
+# only those that are rendered in your TypoScript and Template
+# are visible on your page.
+---
+#'TYPO3.Neos.NodeTypes:Page':
+#  childNodes:
+#    sidebar:
+#      type: 'TYPO3.Neos:ContentCollection'
+
+'DevDays.NeosWorkshop:Section':
+  superTypes: ['TYPO3.Neos:Content']
+
+  ui:
+    label: 'Coffee Content Section'
+    icon: 'icon-columns'
+    inlineEditable: true
+    inspector:
+      groups:
+        'style':
+          label: 'Style'
+          position: 5
+
+  childNodes:
+    'content':
+      type: 'TYPO3.Neos:ContentCollection'
+
+  properties:
+    'background':
+      type: string
+      defaultValue: 'white'
+      ui:
+        label: 'Background color'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
