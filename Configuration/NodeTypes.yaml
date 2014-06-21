@@ -35,3 +35,13 @@
         reloadIfChanged: true
         inspector:
           group: 'style'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Select Background Color'
+            values:
+              'white':
+                label: 'White'
+              'beige-bg':
+                label: 'Beige'
+              'brown-bg':
+                label: 'Brown'
